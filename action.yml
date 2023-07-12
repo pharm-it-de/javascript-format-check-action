@@ -1,0 +1,19 @@
+name: Code Format Check
+description: Check code format using Prettier and ESLint
+
+inputs:
+  prettier-config-path:
+    description: 'Path to the Prettier configuration file'
+    required: false
+    default: '.prettierrc.json'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Check with Prettier
+      run: npx prettier --check --config ${{ inputs.prettier-config-path }} .
+      shell: bash
+
+    - name: Check with ESLint
+      run: npx eslint .
+      shell: bash
