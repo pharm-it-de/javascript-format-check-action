@@ -1,5 +1,3 @@
-Copy code
-
 # JavaScript Code Format Check
 
 This GitHub Action checks the code format of JavaScript files in your repository using Prettier and ESLint. It ensures that your code follows consistent formatting rules and adheres to best practices.
